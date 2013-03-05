@@ -86,7 +86,7 @@ class ruby (
     }
 
     exec { 'ruby::update_rubygems':
-      path    => '/usr/local/bin:/usr/bin:/bin',
+      path    => '/usr/local/bin:/usr/bin:/bin:/var/lib/gems/1.8/bin',
       command => 'update_rubygems',
       subscribe => Package['rubygems-update'],
       refreshonly => true,
