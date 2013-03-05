@@ -67,7 +67,7 @@ class ruby (
   # resource for rubygems ensure to installed, we'll let rubygems-update
   # take care of the versioning.
 
-  if $rubygems_update == true {
+  if $rubygems_update {
     $rubygems_ensure  = 'installed'
   } else {
     $rubygems_ensure  = $gems_version
